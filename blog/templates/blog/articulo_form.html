@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+mundo reptil - Crear
+{% endblock titulo %}
+
+{% block contenido %}
+<h1>Crear artículo:</h1>
+<br>
+<form enctype="multipart/form-data" method="POST">
+ {% csrf_token %}
+ {{ form.as_p }}
+ <input type="submit" value="POSTEAR" class="btn btn-success"/> <a class="btn btn-primary" href="{% url 'lista_articulos' %}" type="button">VOLVER</a>
+</form>
+<br>
+{% endblock contenido %}

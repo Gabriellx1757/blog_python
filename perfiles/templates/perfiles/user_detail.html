@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+mundo repti - Mi perfil
+{% endblock titulo %}
+
+{% block contenido %}
+<h1>Información personal:</h1>
+<br>
+      <p>Nombre: <b>{{ user.first_name }}</b></p>
+      <p>Apellido: <b>{{ user.last_name }}</b></p>
+      <p>Username: <b>{{ user.username }}</b></p>
+      <p>Email: <b>{{ user.email }}</b></p>
+<a class="btn btn-primary" href="{% url 'editar_perfil' user.id %}" type="button">EDITAR DATOS</a>
+<br><br>
+{% endblock contenido %}

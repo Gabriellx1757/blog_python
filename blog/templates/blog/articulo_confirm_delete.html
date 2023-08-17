@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block titulo %} mundo reptil - Eliminar {% endblock titulo %}
+
+{% block contenido %}
+<form method="post">
+ {% csrf_token %}
+ {{ form.as_p }}
+ <p>¿Está seguro de que desea eliminar el artículo?</p>
+ <input type="submit" value="ELIMINAR" class="btn btn-danger"/> <a class="btn btn-primary" href="{% url 'lista_articulos' %}" type="button">VOLVER</a>
+</form>
+<br>
+<a href="{% url 'lista_articulos' %}"><i class="fa-solid fa-turn-down-left"></i></a>
+
+{% endblock contenido %}

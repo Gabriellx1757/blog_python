@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block titulo %}
+ - Sobre mí
+{% endblock titulo %}
+
+{% block contenido %}
+<h1>Sobre mí:</h1>
+<br>
+<img src="{% static 'images/about.jpg' %}" alt="sobre mi" width="100">
+<br><br>
+        <p> Mi nombre es gabriel ardiles.
+            soy estudiante y actualmente estoy en el curso de python de coder house.
+            </p>
+<br>
+<a class="btn btn-success" href="https://www.linkedin.com/in/gabriel-ardiles-805b3b288/" type="button">¡CONTACTAME!</a>
+<br><br>
+{% endblock contenido %}

@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+mundo reptil - Realizar consulta
+{% endblock titulo %}
+
+{% block contenido %}
+<h1>Contactarse:</h1>
+<br>
+<form method="POST">
+ {% csrf_token %}
+ {{ form.as_p }}
+ {{ form.errors }}
+ <input type="submit" value="ENVIAR" class="btn btn-primary"/>
+</form>
+<br>
+{% endblock contenido %}

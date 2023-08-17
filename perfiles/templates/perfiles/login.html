@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+mundo reptil - Iniciar sesión
+{% endblock titulo %}
+
+{% block contenido %}
+<h1>Iniciar sesión:</h1>
+<br>
+<form method="POST">
+ {% csrf_token %}
+ {{ form.as_p }}
+ <input type="submit" value="ACCEDER" class="btn btn-primary"/>
+</form>
+<br>
+{% endblock contenido %}
